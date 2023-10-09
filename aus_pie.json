@@ -1,0 +1,27 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "beige",
+  "description": "Pie Chart with percentage_tooltip",
+  "title": "Australia",
+  "data": {
+    "values": [
+      {"category": 1, "value": 0.777},
+      {"category": "2+", "value": 0.223}
+    ]
+  },
+  "mark": {"type": "arc", "tooltip": true},
+  "encoding": {
+    "theta": {"field": "value", "type": "quantitative", "stack": "normalize"},
+    "color": {"field": "category", "type": "nominal"},
+    "tooltip": [
+      {"field": "category", "type": "nominal", "title": "Number of Languages Spoken"},
+      {
+        "field": "value",
+        "type": "quantitative",
+        "title": "Population",
+        "format": ".1%"
+      }
+    ]
+  },
+  "config": {}  
+}

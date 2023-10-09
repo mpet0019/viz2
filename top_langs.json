@@ -1,0 +1,36 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "beige",
+  "data": {
+    "url": "https://raw.githubusercontent.com/mpet0019/fit3139/main/Top%20100%20Languages.csv?token=GHSAT0AAAAAACITGFFSOUCOBCPJIJ5ZI3SKZJCNR5A",
+    "format": {"type": "csv"}
+  },
+  "mark": "bar",
+  "width": 300,
+  "height": 2000,
+  "encoding": {
+    "x": {
+      "field": "Total Speakers",
+      "type": "quantitative",
+      "title": "Total Speakers",
+      "sort": "-x"
+    },
+    "y": {
+      "field": "Language",
+      "type": "ordinal",
+      "title": "Language",
+      "sort": "-x"
+    },
+    "color": {
+      "field": "Language",
+      "type": "nominal",
+      "legend": {"title": "Language"}
+    },
+    "tooltip": [
+      {"field": "Language", "type": "nominal"},
+      {"field": "Total Speakers", "type": "quantitative", "format": ",d"}
+    ]
+  },
+  "title": "Top 100 Languages in the World",
+  "config": {"legend":{"disable": true}}
+}

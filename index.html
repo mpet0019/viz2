@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<body style="background-color:beige">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <script src="index.js"></script>
+
+    <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Languages of the World</h1>
+    <div class="container">
+        <div class="left-column">
+            <h2>Native and Non-Native Speakers of Languages</h2>
+            <div id="language_scatter">
+            </div>
+            <p>English and Mandarin stand out as the two most widely spoken languages globally. However, a nuanced insight emerges from the analysis of this graph, 
+                revealing a profound contrast in the demographic characteristics of those proficient in these languages. 
+                Notably, over half of the world's English speakers have acquired it as a secondary language, 
+                distinct from their mother tongue. In stark contrast, almost 90% of Mandarin speakers are native speakers. 
+                This data underscores the remarkable prevalence of English as the most widely learned second language worldwide.
+            </p>
+            <div class="vertical-element"></div>
+            <div class="vertical-element"></div>
+            <div class="vertical-element"></div>
+            <h2>Number of Languages Spoken by the Population</h2>
+            <div class="pie-container">
+                <div id="world_pie" class="pie-chart">
+                </div>
+                <div id="aus_pie" class="pie-chart">
+                </div>
+            </div>
+            <p>While it is noteworthy that 43% of the global population possesses the ability to fluently communicate in two or more languages, 
+                the linguistic landscape in Australia presents a distinct perspective. In the Australian context, only 22.3% of the population can be classified as bilingual.
+                 This discrepancy highlights both the global trend towards multilingualism and the unique linguistic composition within Australia
+                </p>
+            <div class="vertical-element"></div>
+            <div class="vertical-element"></div>
+            <div class="vertical-element"></div>
+            <div id="map">
+            </div>
+            <p>This map offers a comprehensive overview of English proficiency on a global scale. 
+                Notably, regions such as Australia and the United States exhibit a significant concentration of English speakers, in line with expectations. 
+                However, it also unveils intriguing insights, such as Iceland, a country where Icelandic is the official language, 
+                boasting an impressive 98% population with fluency in English. This data underscores the widespread influence and adaptability of the English language.
+            </p>        
+        </div>
+
+        
+        <div class="right-column">
+            <div id="top_langs">
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+
+</html>

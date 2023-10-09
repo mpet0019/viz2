@@ -1,0 +1,47 @@
+/* CSS styles for the two-column layout */
+.container {
+    display: flex; /* Use Flexbox to create a row layout */
+}
+
+.left-column {
+    flex: 5; /* Adjust the width of the left column */
+    padding: 40px; /* Add padding for spacing */
+    box-sizing: border-box; /* Include padding in width calculation */
+    display: flex; /* Use Flexbox to create a column layout */
+    flex-direction: column; /* Stack elements vertically */
+}
+.right-column {
+    flex: 5; /* Adjust the width of the right column */
+    padding: 40px; /* Add padding for spacing */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+.pie-container {
+    display: flex;
+    justify-content: space-between; /* Distribute space between pie charts */
+    margin-top: 20px; /* Add margin to separate from the scatter plot */
+}
+
+/* Style for individual pie charts */
+.pie-chart {
+    flex: 1; 
+}
+
+/* Vertical Spaace Box */
+.vertical-element {
+    margin-bottom: 20px; /* Adjust the value as needed */
+  }
+
+/* Apply Helvetica Neue font to the body text */
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Apply Helvetica Neue font to headings (h1, h2, h3, etc.) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Apply Helvetica Neue font to specific elements with class or ID selectors */
+#top_langs, .pie-chart, .vertical-element {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

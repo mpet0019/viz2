@@ -1,0 +1,64 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "beige",
+  "width": 400,  
+  "height": 300,  
+  "data": {"url": "https://raw.githubusercontent.com/mpet0019/fit3139/main/Top%20100%20Languages.csv"},
+  "params": [
+  {
+    "name": "Origin_Group_Selection",
+    "bind": {
+      "input": "select",
+      "options": [
+      null,
+      "Afro-Asiatic",
+      "Austronesian",
+      "Dravidian",
+      "Indo-European",
+      "Japanic",
+      "Koreanic",
+      "Kra-Dai",
+      "Sino-Tibetan",
+      "Turkic",
+      "Uralic"
+      ],
+      "labels":[
+      "Show All",
+      "Afro-Asiatic",
+      "Austronesian",
+      "Dravidian",
+      "Indo-European",
+      "Japanic",
+      "Koreanic",
+      "Kra-Dai",
+      "Sino-Tibetan",
+      "Turkic",
+      "Uralic"
+      ],
+      "name": "Origin Group Selection: "
+    }
+  }
+  ],
+"transform": [
+  {"filter": "Origin_Group_Selection == null || datum.Origin == Origin_Group_Selection"},
+  {
+    "calculate": "datum['Total Speakers'] - datum['Native Speakers']",
+    "as": "Second Language"
+  }
+],
+
+  "mark": "circle",
+  "encoding": {
+    "x": {"field": "Native Speakers", "type": "quantitative", "title": "Native Speakers"},
+    "y": {"field": "Second Language", "type": "quantitative", "title": "Non-Native Speakers"},
+    "size": {"field": "Total Speakers", "type": "quantitative"},
+    "color": {"field": "Origin", "type": "nominal"},
+    "tooltip": [
+      {"field": "Language", "type": "nominal"},
+      {"field": "Total Speakers", "type": "quantitative", "format": ",d"},
+      {"field": "Native Speakers", "type": "quantitative", "format": ",d"},
+      {"field": "Second Language", "type": "quantitative","title": "Non Native Speakers", "format": ",d"},
+      {"field": "Origin", "type": "nominal"}
+    ]
+  }
+}
